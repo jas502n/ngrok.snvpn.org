@@ -31,7 +31,7 @@ Example: ./ngrok -subdomain server  -proto=http -config=ngrok.config 80
 ==========================================================================
 
 
-更多命令，请输入./ngrok  --help 查看！！！ 官网：http://www.ngrok.org
+更多命令，请输入./ngrok  --help 查看！！！ 官网：http://www.ngrok.com
 
 Usage: ./ngrok [OPTIONS] <local port or address>
 Options:

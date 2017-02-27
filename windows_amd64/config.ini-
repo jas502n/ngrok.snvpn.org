@@ -1,0 +1,12 @@
+﻿server_addr: "ngrok.snvpn.org:4443"
+trust_host_root_certs: false
+tunnels:
+  myport: #tcp穿透
+    proto:
+      tcp: 1234 #需要穿透的本机端口
+
+  myhttp: #http穿透
+    subdomain: "test" #自定义服务器域名前缀
+    proto:
+      http: 80 #本机web端口
+      https: 80

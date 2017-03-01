@@ -54,17 +54,28 @@ Examples:
 同时转发多个TCP端口配置文件ngrok.config
 
 server_addr: "ngrok.snvpn.org:4443"
+
 trust_host_root_certs: false
+
 tunnels:
+
   myport:
+  
     remote_port: 12345
+    
     proto:
+    
       tcp: 22
+      
 
   mytest:
+  
     remote_port: 22222
+    
     proto:
+    
       tcp: 888
+      
  
 ========================================================================== 
   这里要注意空格，是以2个空格为一个缩进，一个是tcp名字叫myport,另外一个叫mytest

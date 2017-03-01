@@ -65,6 +65,7 @@ tunnels:
     remote_port: 22222
     proto:
       tcp: 888
+ 
 ========================================================================== 
   这里要注意空格，是以2个空格为一个缩进，一个是tcp名字叫myport,另外一个叫mytest
   
@@ -79,4 +80,6 @@ Forwarding                    tcp://ngrok.snvpn.org:22222 -> 127.0.0.1:888
 Forwarding                    tcp://ngrok.snvpn.org:12345 -> 127.0.0.1:22                                                 
 Web Interface                 127.0.0.1:4040                                           
 # Conn                        0   
-Avg Conn Time                 0.00ms                                                                                                                                                                                                           
+Avg Conn Time                 0.00ms  
+
+

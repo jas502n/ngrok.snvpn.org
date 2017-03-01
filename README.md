@@ -51,3 +51,32 @@ Examples:
 	ngrok -hostname="example.com" -httpauth="user:password" 10.0.0.1
 	
 ==========================================================================
+同时转发多个TCP端口配置文件ngrok.config
+
+server_addr: "ngrok.snvpn.org:4443"
+trust_host_root_certs: false
+tunnels:
+  myport:
+    remote_port: 12345
+    proto:
+      tcp: 22
+
+  mytest:
+    remote_port: 22222
+    proto:
+      tcp: 888
+========================================================================== 
+  这里要注意空格，是以2个空格为一个缩进，一个是tcp名字叫myport,另外一个叫mytest
+  
+  客户端启动命令 ./ngrok  -config=ngrok.config start myport mytest
+  
+  执行以后就能看到同时映射2个tcp端口到ngrok.snppn.org上了。
+  都是指定端口12345   22222                                                                                                                ==========================================================================                                                               ngrok
+																   
+Tunnel Status                 online                                                                                     
+Version                       1.7/1.7                                                                                     
+Forwarding                    tcp://ngrok.snvpn.org:22222 -> 127.0.0.1:888                                               
+Forwarding                    tcp://ngrok.snvpn.org:12345 -> 127.0.0.1:22                                                 
+Web Interface                 127.0.0.1:4040                                           
+# Conn                        0   
+Avg Conn Time                 0.00ms                                                                                                                                                                                                           
